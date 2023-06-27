@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            width: 800px;
+            height: 200px;
+            background-color: lightcoral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu {
+            list-style: none;
+            border: 1px solid #c0c0c0;
+            font-size: 30px;
+        }
+
+        .menu li a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .menu li {
+            border-right: 1px solid#333;
+            float: left;
+            position: relative;
+        }
+
+        .menu li ul {
+            display: none;
+            position: absolute;
+        }
+
+        .menu li a:hover{
+            background-color: #333;
+            color: #fff;
+        }
+
+        .menu li:hover ul{
+            display: block;
+        }
+
+        .menu li ul li{
+            border: 1px solid #c0c0c0;
+            display: block;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Fotos</a></li>
+        <li><a href="#">O que fazemos?</a>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Marketing</a></li>
+                </ul>
+            </li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+    </nav>
+</body>
+</html>

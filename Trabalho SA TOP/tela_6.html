@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela 6</title>
+    <link rel="stylesheet" href="Style/style site_tela6.css">
+</head>
+<body>
+    <header>
+        <form class="form-busca-site" action="busca.php">
+            <input class="btn-text-top" type="text" name="txtsearch" placeholder="Buscar">
+            <div>
+                <button class="btn-buscar-top" type="submit"></button>
+            </div>
+        </form>
+        <div class="logo">
+            <a href="tela 4.html">
+                <img src="Imagens/logo_site 2.png" alt="">
+            </a>
+            
+        </div>
+        <div class="conta">
+        </div>
+        
+        <div>
+            <a href="tela 9.html">
+                <img class="icone_login" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAodJREFUSEu1VdFNW0EQ3IXbk/wFVBBcAaaCQAUhHYQKAhXEqSB2BUkHwRXEVACpAKcD+EJ6t3ijOd099vnZGCFxEhLy7dvZndnZY3rnw++cn7YCpJROiOgjEY3MbISCmPmWiPA3F5Hrl4rcCPD4+HgYQvhJRAB46cxV9XwwGCzWBa0FaJrmgpm/EdG+mf1j5l+oNoSAqklV0cmJmX1h5g9EdG9m4xjjdBWkB1CS/yiB0xDCmJnv11VnZvuqOiair7g3s8sY48THdgAKLTeonJk/hxCuEFx+B2ilC7RcVlpU9czMfqMTVT32dHUAUkrzIuhURC5c8gy60kUnWUoJlaMTCH9aY1uAWgU4F5FRpSWlhC4+EdFUVXP7IQSAI9lMRM4KPfsppduiyamIoNjnMU0pgUsI+11E8H8+KSXwv6eqw9p6oewOlIjIgYvt5Wg7cPS06K8AeBCRljqnRduZB8iVhhAO/NQ4iiaqmscwhAB6QFObyOl1Z2aLGONwlSIrH3cACh2Y/70VkR/gBz8xjjoSkVy87wBJjoioQ5GrDAL7Mb1Yda+j6FpEcqwHqNPSERlBTdOMdnZ2jszsMH/EvFgul39jjNnZa0Tua+DGdCEix9ABiZnZG2zV0O0egqtTSjfMfOhN2jFa0zSLMsd5RagqRrFOyaxsUIBgF8EbOPchhGFdGfBRjDF32qGojCR4+1PuYBQstI7x6oel4mqsHFvuOhr2lp2zfM3VE71eOFHrTz39Nq1rrGG8BdiQ2POTp6enmXfy7u4uKMJaz3SY2XmMEWu9czY+OOUlg/Xxmr108KKN6+55NYAbPXCLhQZh85NZxMaIXm1KvFbkLZW+6Xrro/+mrO6j/9d0fih3+haJAAAAAElFTkSuQmCC"/>/>
+            </a>
+            
+           <a href="tela_10.html">
+            <img class="icone_coracao" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQNJREFUSEvFleERgjAMhd/bwBHcQJ1ARnADdQJncQJ1A0fQDWADR3CDeOECR4HSglT5Rcnxvr40SYnEDxPr4z8AEdkB2ANYm8MXgDPJu64tfgKwtHgO4FbFm1lxHIjIAsAFgAL6nod9zDxx3cCR5LuKtwG6k9WX55KT3HQAInKw3X+pX/6uLq76UjsQEbW/nUMdwJNkmcYmQGYSL2VIlto/BSRPUdpDtgaao0wLklWDuqPCGk1TNbUXCgCZt9HMhXbzFEhH3KmiZolOcNIr7gWMdOIVHwREQgbFg4AAJCgeBfBAosSjAS2ILp1SHJpho65Mqy4dZPWFEhqQowAhsb54csAHNmBsGdcalyAAAAAASUVORK5CYII="/>/>
+           </a>
+            
+            <a href="tela_9.html">
+                <img class="icone_carrinho" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAT1JREFUSEvN1ctNxDAQBuAZyb+lPUEJoQKWDqACtgOWKxyADqACuMCVUAHQAVTAUgFQAXCK5BlpUNAGhX0kTrJB+Gp7vhlP7DD1PLjn+PR3gIjYtJoPIkoBnKyiup8KSkARdwfAQ1dk7ohCCMfMfE5E9wBGKwfMbF1V3/PAqroxGAxeuyALmxxCSJl5r0PgCYCtfP8yYMjMT20BM3vz3idLgXxCRCZEtNkSOQNwWgmEEMbMfN0GKPeu8qKJSH4n1hoijwC2iz11wAURHTUBzGzfe59GAVmWJc65lwbAp3MuYea88u9R+xaJyB0R7cYgZnbjvR+X19YCqjoys9sYgIjmnpdaoMEn+wxgOJtIFBCZ/cJlUYCqXprZATNfOecOy5Gq5qKaPD2i4l9BAH4lVX7mZ+eigd4r6L0H/xr4AtERhRmQAZhrAAAAAElFTkSuQmCC"/>/>
+            </a>
+            
+        </div>
+    </header>
+    <div class="container">
+        <div class="retangulo_esquerda">
+            <div class="sub_esquerda1">
+                <h1>TÊNIS WITDH TROM 2.0- BOB ESPONJA</h1>
+            </div>
+            <div class="sub_esquerda2">
+                colocar depois as classificações
+            </div>
+            <div class="sub_esquerda3">
+               <h2> <ul>
+                    <li>Indicado para o dia a dia</li>
+                    <li>Material: textil e sintético</li>
+                    <li>Categoria: caminhada</li>
+                    <li>Tecnologia: wave</li>
+                </ul>
+            </h2>
+            </div>
+            <div class="sub_esquerda4">
+                <p>Compartilhe o produto!</p>
+                <br>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXJJREFUSEvdle1RwkAQht89nEkOCMYK1A60AmMH2EGoQKxEqAA60A7ECrQErMDweTADWefOS4xKNJDhD/mVudvdZ/fdzYaw54f2HB8HBJi4bkBEPQbOyshGwJCZW95iMdBxUonGUg4JOC0TPPHVkLpS598AEynZHAhxWZ/NXncBTWu1C47jF+3rKWWSTytIAAAiJmo15vPHbSDjarVJzD0A/n+AJG7HU+quCGQiZQfAbdY2twIC7hi4t8aDlePcnERRtAn07vv+0XL5ACCwcqS+uQB9YbRcrwcgOtaSkRDXP/ti9X4ykjCPqFIJtE0i9Z8AnY3NTvfhymbXrivV1e9TKduZKp9XjtNMqiwMSCTJ6ktEfX3OzKG973pKtbPybQ3QzmZC4rhvJdOEEQsRbpq0nQBGls8ZNxWQEGHet7IzoMi4aptDBrhulDaxqB45dgy8NZQyW/lrF7luwET9shtVByfm8Ne6Lpl0rvsB/TL3JdEHN+LRGR9yISkAAAAASUVORK5CYII="/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAaVJREFUSEvdVU1OwlAQ/qapuJTEspYbWJbSGOEE1hOoJ4B3AuEEr0fgBpYTQGLqVrgB7EyoEbb+MOZVitAfWpuwYZavM9/3vm/mTQl7DtozPg6MoCwH5bloznfZpnJ0rdQCwwZgMjAhQs9vWV1Vdyqf7TdRd0OMLYsM6U0IsGfCGqWRGNIbgnCV8F3VmGASvqg7MYKK9EwmvACYg5c3vrgcRkE2ctL4R8Q0BtgJL7mtwPH4r5KdL/7sblqm5BPx4w4LF+ClvXm5qEUuCNcRAJeJXSJtgm/UQCxTCRh9X1iqN+tYE6jmHaFUZUCRnBV6H4yuL6xOKoFOpfdCwGFRpMHqODZFhW+vwBi16ARuEaymRE3Pyb+VMKa+sKrRutiqWE3KLRA8pPyRYE/MInVgyKcGSBvkRwbAmH7hw0zaAonLzpBeB4SH3CS8bCY9zEQFIejv2B47TKzsSg1i3M+E1UtLSFEQ2NTK6MOCGO1d4FsKAu+hOSCcZ1rD6OvQ2q/iYpKVG1NQkd4dQA0Gm2syxjhYgiBXB7l5gEPiA/ujZflZ5PveLfoBbl2hGT3I1DYAAAAASUVORK5CYII="/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAmJJREFUSEvFVUty2lAQ7BGQ4B0+QWAnkBe6QcgN4ATACYx3VrIIWcRaxj4B3CDcIPIJrFQhkFfmBsarACk0qUF6idAPV6pcZsNC86bf9HT3I7zwj164P14fQLfP2gD3mGASw2TCihguwA6g3frWzCliIXcC3dbrQGkMQACeAGmqOQSuMdgE6L00ZqLpybo8cEfuKgsoE6D1tWXuSvSDmAnQrn1rNso63Lwyhkz4Fk5F3axpUgDmyKz9qv5+IMaTFnBn/mnuFlEglwk0mjDh3cm60khOkgJo2saUwW0tQFuaC+D67brmW/4yDygCuRO67i9n3XjdAYAqBOiL0CJ7YCrdEWPlW16jaBJFF3HQXXxcTFXtAUDTNq4ZOK9uKqcyqjoUFvPAt+aTIhDdNmRpNwvLG2YC6HZrLznfmrflPw6QvFkWUPK81BxMoNuG8Oz4lteXj5FUH0Ql95fe6THXCwMBoRevTQEQ4C4sr6OaxaaY+JY3KKbobATwZ9/y/vZNABxSpJrptiHc9wBMqpvKxbayre9KNCbmaXXz5kZJM1QgTN/y6oVLBnaNpCyVAKKoENdGTULFhZS2VgBNFcUZO9jHw4OSaZKOMJeCkYoJiRDlF91u9QEaA/Qh7uiU0bKUkAaSi5Tr1U3ZFXr++YV/KgVmUhSOmdbysaiI9tFQ0+Q6uXnV7DBp34lxwcAjaJ+ky/gi1eEwQrbnTDSUUMxqntqBWmTOjcWEy2jJZhjje4ffAkE/L6uSPnAJWILhELMjYSf8EkrD6A2oA1yTt4FALu8V858PzjHXPvf767/Jz71pXt0fVaRKKI6aTEMAAAAASUVORK5CYII="/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAg5JREFUSEvNVU1um1AQ/gbc+qcGOZtsTU6QdGm8aLLpts4BKjk3yA3inKDKrrs6J0i67CpkAVmGnqBWL2CCU2Or6E30oK/FBBm8sNInISQYzTffzHzfI2z50Jbz42UApo0765UmzpjpAIB81h2fiH0QLtq/+n4+8BmDsHE3JOIvfwJvAQSQCYpOWkAHwDv5m5lOzEVvnA1dAXh84x6woHsAt3F9OdgJjoIqM5KMaySuAdonjd9mmawAhC1vTAKDuLG0qiR/bLgfQXTOwEPMdFwj/sGES3NuD1VhqwBNb0LAxIjsw3zlYcsbkKD9pBWa8M15/2tQd9/rGn0j4Gc7sruzpucQ0G1H9l4hwKzpMYALI7JPVcC0c9OpLes3BcN2dF18/i0Q6kLfbS96lxJAzsOI7L+FrzBIAIjPjXl/pABmTdcHk8UahubcvpbfUzYYg3BvRPbRv9gNAZJEjCsmHKvkKpnatuy/jRnMWu4ITGdZyrnWTbOM/z+ArbdItiMZMqjLxEO5msmQU7V/AvA9u9LVWlS4pq8dqdKcNp6pvRQgLBMaODE+Bvn5rUrZeg4DlhnZVrGSpVUwPsT15V4Vq8gySv2oxCoyZufETCc7i96kutnxlVT7WrPLDFDZtZR+AKZiuyZWnpW8S+1aVSuZCKZTMA6lea1lwXgAwSGNR5UunCot2STmZe7kTSosi30Ctg5OKF4OjDcAAAAASUVORK5CYII="/>
+            </div>
+    </div>
+        <div class="retangulo_meio">
+            
+            <div class="retangulo_meio_esquerda">
+                <div class="div_qudrado_fotos"></div>
+                <div class="div_qudrado_fotos"></div>
+                <div class="div_qudrado_fotos"></div>
+                <div class="div_seta_fotos"></div>
+            </div>
+            <div class="retangulo_meio_direita">
+                <div class="div_imagem">
+                    <img src="Imagens/imagem1_tela6.png" alt="">
+            </div>
+        </div>
+    </div>
+        <div class="retangulo_direita">
+            <div class="sub_div_direita1">
+                <div class="div_valor_e_compar">
+                    <div class="sub_valor">
+                        <h1>R$349,99</h1>
+                        <p>Avaliar produto</p>
+
+                    </div>
+                    <div class="sub_compartilhar">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUtJREFUSEu1ldFRAkEQBZsINAQzUCNQMzAEjUCIQI1AjUCNQDNQM9AIwAwkAqy2Zq3liqWW27v5OTjgvbl5vcOEkWsysj6tBufAHXAALIAZ8Jo33WKg+MuGCZwB7+l+i4EiJ8AtcA9cxNN8AKdDGKxCJDXpmOade70zsMO3EJsCz4DXa6DpCezyMR/BrhkY3FUIOOOHoGI/urNLawncAJ9xNQs7N4siRSUqngA/08TSVPGfmjOUU1SiIunYoaTIe3XlBtuoWGO7Wh3WKHKeh0FDToV6gxiUMkgNO8LLlhEppImkSMVXvD6KUPfCSVI8vTuHvG20EiQ5Imwp7vvvwNcmHLHGTcvOgya2PmGpHKPf+au+yy5fFd1l55Mctxr4+1GXnQbpYHaXnXCYSdOIEnGb/nAGySA1KNYGKsISJVn/AbeEXL0t+lJUbfAL9INJGalrpjsAAAAASUVORK5CYII="/>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAATpJREFUSEvFleFRwzAMhb9OQEeACYAJChuwAXQCGIVOUNiADYANYAIYASYo93JSTnWd2PFdiv+ksaL39J5kd8HMazEzPv9GcAPcAhem8BvYAC/2rvg9cGrvH8BziPfGpAqWwBYQQG692ebVQFwFrIEfj6cEquQc+AUegAj4CJxYosf1vZaUelx7lzmCO6teyZLeV2EfS10kzMVlpYqQiiflRQVKXsVgw4R5ke9AZ2Mk2BngGaBKWpaUf1lih31Ugtktcv/UPNmUNrFkmYZA9uiZbbIAfEz1vJ5AItBXG9fPcEAPrgofRZ2FWpIUXNMzeNCkYgrJKHg6RdHjGpIi+BhBSUkVeIlgiET7saF7nqejVvN/kNrll5umZRS8RoEXFEm0VwU+hSDapd/FynPXdemkNsVretAEfDQFf3ZDVxl/VBnpAAAAAElFTkSuQmCC"/>
+                    </div>
+                </div>
+                <div class="div_forma_pagamento">
+                    <div class="sub_credito">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJpJREFUSEtjZKAxYKSx+QzDywIHBgaG+QwMDAoUBtsDBgaGRAYGhgMgc5CDCCQhT6HhMO0gsxTRLfgPlaU0XlDMQTaMbhZQKZQgwY/NB6MWwEIAZxAN/VQE8wEs2aJHOiEfEp0PaG4BucmVaB9Q3YIPDAwM/OSaiqbvIaxURo4wUHG9gAolKsjwBGzFNZUcj2oMoSRHsaVD3wIAEjsgGcmvqi8AAAAASUVORK5CYII="/>
+                        <p>Em até 12x de R$30,00</p>
+                    </div>
+                    <div class="sub_pix">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUZJREFUSEvFVTtWwkAUvS+NpS4BC4OdSujFHbATYkdsDA2TTtiBS8gOxFonJ3YkNLgDWwt9nsGMR8MnOTOA0+Uk79537315Q9jxoR3j44fAC1zeJpkU+QJ7fwS6e61Ed1BX1bq6pQz+lWATuZUCL3C7APcA6iwsY9x/wBmk0XReZW2lRe0bN2TG7Yos5lLkx9YEXuC+AThk0HUistF52Dhy3g9iAl86xBdPw1mqSIwt0oXEztVzNJ2smypzgv7JCES9EnDKjDiJ8oG1RQqgyKEL4OwPEfNYRjPfyqJVlrT7px2mzwf1Tv+Q5hYVIYPIl8NsrEBbQdMn8B2AVynyhpWCDWMKPVlWBEWx8j/8lcGLepYij7cSchWItYI6G9U45DrgRgrqApe/K98jS8uuFTQnas+YEDDoMRHZ98Ytzv4ufZOO69R8AfpJ7xnJoPkHAAAAAElFTkSuQmCC"/>
+                        <p>R$ 349,99 no Pix</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub_div_direita2">
+                <div class="numeracao">38</div>
+                <div class="numeracao">39</div>
+                <div class="numeracao">40</div>
+                <div class="numeracao">41</div>
+                <div class="numeracao">42</div>
+                <div class="numeracao">43</div>
+            </div>
+            <div class="sub_div_direita3">
+               <a href="tela_11.html">
+                <input type="submit" class="btn_logar" value="Comprar" name="Comprar" >
+               </a>
+                
+            </div>
+            <div class="sub_div_direita4">
+                <a href="">
+                    <input type="submit" class="btn_logar" value="Carrinho" name="Carrinho" >
+                </a>
+            </div>
+            <div class="sub_div_frete">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAU5JREFUSEu1lO1RQkEMRQ8dSAVoBWgFWAJWoB2AnWgHUAF0IFagVoB2oBXIXGaXWfOyXzOSn2/z7sneJDvizDE6sz4tgEtgAdwC16Ggd2AHPAOfpSJrgKcgXtJQzmMuoQRQldNGC5V74+XmAC2VWz3ZtbQfPYA835vEr/CzKlWoFypiYvKubE88gK1e4hL8NmIXgIApZHALD2C9vwO2mV7MgU1yNuiFB/g1YmOn+pji2flH878BP4CsO4UH0ALNkpwei17DQhYBK+A+AWhTNeNek98A2RRjDTzUbqAn4cX0QRDN+Ef4rgXUtKXiOlIhcZSPqblF69niWMvAnhLAu0VmUk+fB9WXADrreS7cZ6IG0HmLVa418V6151ozrbHNvapquuy0E1YcU+t1DlIVb7EowiykSbwHoFxB1HiFdiJrS23RauPYdV5rcpeYl3wAl91AGYDJRKAAAAAASUVORK5CYII="/>
+                <p>Calcular frete</p> 
+            </div>
+        </div>
+    </div>
+  
+
+</body>
+</html>

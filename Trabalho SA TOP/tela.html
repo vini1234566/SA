@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela site_1</title>
+    <link rel="stylesheet" href="Style/style_site tela1.css">
+</head>
+
+<body>
+    <div class="primeiro">
+        <div class="img-content">
+            <IMG SRC= "Imagens/logo_site.png" ALIGN="RIGHT"ALT="Logo do site" height="300" width="300">
+            </div>
+    </div>
+    <div class="segundo">
+        <div class="container">
+            <div class="login-content">
+                <h1>Criar uma nova 
+                    conta!
+                </h1>
+                <p>Já está cadastrado? <a href="tela_2.html">Entre aqui!
+                </a>
+                </p>
+                <br><br>
+                <form  action="/login" method="post">     
+                    <label for="nome">Nome:
+                        <!-- <br><br> -->
+                            <input type="text" class="input_text" placeholder="Digite seu nome completo" id="nome" name="Nome" size="20" maxlength="50">
+                    </label>
+                    
+                    <br><br>
+                    <label for="email">Email:
+                        <!-- <br><br> -->
+                           <input type="email" class="input_text" placeholder="Digite seu email" name="Email" id="email" required>
+                    </label>
+                    
+                    <br><br>
+                    <label for="senha">Senha:
+                        <!-- <br><br> -->
+                           <input type="password" class="input_text" placeholder="Digite sua senha" name="Senha" id="senha">
+                    </label>
+                    
+                    <br><br>
+                    <label for="senha">Confirme Senha:
+                        <!-- <br><br> -->
+                        <input type="password" class="input_text" placeholder="Confirme sua senha" name="Confirme Senha:" id="confirme senha">
+                    </label>
+                    <br><br>
+                    <label for="nome">Data de nascimento:
+                        <!-- <br><br> -->
+                        <input type="date" class="input_text" placeholder="00/00/0000" id="data" name="Data de nascimento" size="20" maxlength="50">
+                        <br><br>
+                        <input type="submit" class="btn_logar" value="Cadastre-se" name="Cadastre-se" >
+                </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

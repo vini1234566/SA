@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de compra</title>
+    <link rel="stylesheet" href="Style/Histórico de compra.css">
+</head>
+
+<body>
+    <header>
+        <form class="form-busca-site" action="busca.php">
+            <input class="btn-text-top" type="text" name="txtsearch" placeholder="Buscar">
+            <div>
+                <button class="btn-buscar-top" type="submit"></button>
+            </div>
+        </form>
+        <div class="logo">
+            <a href="Pagina_inicial.html">
+                <img src="Imagens/logo_site 2.png" alt="">
+            </a>
+        </div>
+        <div class="conta">
+        </div>
+
+        <div>
+            <a href="Tela_de_perfil.html">
+                <img class="icone_login"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAodJREFUSEu1VdFNW0EQ3IXbk/wFVBBcAaaCQAUhHYQKAhXEqSB2BUkHwRXEVACpAKcD+EJ6t3ijOd099vnZGCFxEhLy7dvZndnZY3rnw++cn7YCpJROiOgjEY3MbISCmPmWiPA3F5Hrl4rcCPD4+HgYQvhJRAB46cxV9XwwGCzWBa0FaJrmgpm/EdG+mf1j5l+oNoSAqklV0cmJmX1h5g9EdG9m4xjjdBWkB1CS/yiB0xDCmJnv11VnZvuqOiair7g3s8sY48THdgAKLTeonJk/hxCuEFx+B2ilC7RcVlpU9czMfqMTVT32dHUAUkrzIuhURC5c8gy60kUnWUoJlaMTCH9aY1uAWgU4F5FRpSWlhC4+EdFUVXP7IQSAI9lMRM4KPfsppduiyamIoNjnMU0pgUsI+11E8H8+KSXwv6eqw9p6oewOlIjIgYvt5Wg7cPS06K8AeBCRljqnRduZB8iVhhAO/NQ4iiaqmscwhAB6QFObyOl1Z2aLGONwlSIrH3cACh2Y/70VkR/gBz8xjjoSkVy87wBJjoioQ5GrDAL7Mb1Yda+j6FpEcqwHqNPSERlBTdOMdnZ2jszsMH/EvFgul39jjNnZa0Tua+DGdCEix9ABiZnZG2zV0O0egqtTSjfMfOhN2jFa0zSLMsd5RagqRrFOyaxsUIBgF8EbOPchhGFdGfBRjDF32qGojCR4+1PuYBQstI7x6oel4mqsHFvuOhr2lp2zfM3VE71eOFHrTz39Nq1rrGG8BdiQ2POTp6enmXfy7u4uKMJaz3SY2XmMEWu9czY+OOUlg/Xxmr108KKN6+55NYAbPXCLhQZh85NZxMaIXm1KvFbkLZW+6Xrro/+mrO6j/9d0fih3+haJAAAAAElFTkSuQmCC" />
+            </a>
+            <a href="Produtos_favoritados.html">
+                <img class="icone_coracao"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQNJREFUSEvFleERgjAMhd/bwBHcQJ1ARnADdQJncQJ1A0fQDWADR3CDeOECR4HSglT5Rcnxvr40SYnEDxPr4z8AEdkB2ANYm8MXgDPJu64tfgKwtHgO4FbFm1lxHIjIAsAFgAL6nod9zDxx3cCR5LuKtwG6k9WX55KT3HQAInKw3X+pX/6uLq76UjsQEbW/nUMdwJNkmcYmQGYSL2VIlto/BSRPUdpDtgaao0wLklWDuqPCGk1TNbUXCgCZt9HMhXbzFEhH3KmiZolOcNIr7gWMdOIVHwREQgbFg4AAJCgeBfBAosSjAS2ILp1SHJpho65Mqy4dZPWFEhqQowAhsb54csAHNmBsGdcalyAAAAAASUVORK5CYII=" />
+            </a>
+
+            <a href="Meu_carrinho.html">
+                <img class="icone_carrinho"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAT1JREFUSEvN1ctNxDAQBuAZyb+lPUEJoQKWDqACtgOWKxyADqACuMCVUAHQAVTAUgFQAXCK5BlpUNAGhX0kTrJB+Gp7vhlP7DD1PLjn+PR3gIjYtJoPIkoBnKyiup8KSkARdwfAQ1dk7ohCCMfMfE5E9wBGKwfMbF1V3/PAqroxGAxeuyALmxxCSJl5r0PgCYCtfP8yYMjMT20BM3vz3idLgXxCRCZEtNkSOQNwWgmEEMbMfN0GKPeu8qKJSH4n1hoijwC2iz11wAURHTUBzGzfe59GAVmWJc65lwbAp3MuYea88u9R+xaJyB0R7cYgZnbjvR+X19YCqjoys9sYgIjmnpdaoMEn+wxgOJtIFBCZ/cJlUYCqXprZATNfOecOy5Gq5qKaPD2i4l9BAH4lVX7mZ+eigd4r6L0H/xr4AtERhRmQAZhrAAAAAElFTkSuQmCC" />
+            </a>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="div_historico_de_compra">
+            <h1>Histórico de compras</h1>
+        </div>
+        <div class="local_produtos_1">
+            <div class="produtos">
+                <div class="data_compra"> <p> Compra realizada dia 25/06</p>
+                </div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"><img src="Imagens/foto_tenis_7_historico.png" alt=""></a> 
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis Space Odyssey</p>
+                        <p>R$ 399,99</p>
+                        <p>Cartão de crédito</p>
+                        <p>Terminando em 4540</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"><img src="Imagens/foto_tenis_1_histórico.png" alt=""></a> 
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis Hyper Beast V2.0</p>
+                        <p>R$ 259,99</p>
+                        <p>Cartão de crédito</p>
+                        <p>Terminando em 4540</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"><img src="Imagens/foto_tenis_2_historico.png" alt=""></a> 
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis Rick Portal</p>
+                        <p>R$ 259,99</p>
+                        <p>Cartão de crédito</p>
+                        <p>Terminando em 4540</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="local_produtos_1">
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"><img src="Imagens/foto_tenis_5_historico.png" alt=""></a> 
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis Attack on Titan</p>
+                        <p>R$ 149,99</p>
+                        <p>Cartão de Débito</p>
+                        <p>Terminando em 5789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"> <img src="Imagens/foto_tenis_6_historico.png" alt=""></a>
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis The Goats</p>
+                        <p>R$ 259,99</p>
+                        <p>Paypal</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"><img src="Imagens/foto_tenis_6_historico.png" alt=""></a> 
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis The Goats</p>
+                        <p>R$ 259,99</p>
+                        <p>Cartão de crédito</p>
+                        <p>Terminando em 4540</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="local_produtos_1">
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"><img src="Imagens/foto_tenis_2_historico.png" alt=""></a> 
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis Rick Portal V2.0</p>
+                        <p>R$ 259,99</p>
+                        <p>Cartão de débito</p>
+                        <p>Terminando em 5789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"><img src="Imagens/foto_tenis_5_historico.png" alt=""></a> 
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis Bob Esponja</p>
+                        <p>R$ 149,99</p>
+                        <p>Cartão de débito</p>
+                        <p>Terminando em 5789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="data_compra"></div>
+                <div class="imagem_e_descrição">
+                    <div class="local_imagem">
+                       <a href="Produto.html"> <img src="Imagens/foto_tenis_4_historico.png" alt=""></a>
+                    </div>
+                    <div class="local_texto">
+                        <p>Tênis Bob Esponja</p>
+                        <p>R$ 259,99</p>
+                        <p>Google pay</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visualize_mais_produtos">
+           
+            <div class="div_visualize_produtos">
+           <a href="Pagina_inicial.html"><h1>Visualize mais produtos!</h1></a> 
+            </div>
+        
+            <div class="div_propaganda">
+               <a href="Pagina_inicial.html"><img src="Imagens/propagando selecao sneakers.png" alt=""></a> 
+            </div>
+        </div>
+    </div>

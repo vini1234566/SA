@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Jul-2023 às 16:44
--- Versão do servidor: 8.0.21
--- versão do PHP: 8.1.2
+-- Tempo de geração: 01/07/2023 às 21:59
+-- Versão do servidor: 8.0.33
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `avaliacoes`
+-- Estrutura para tabela `avaliacoes`
 --
 
 CREATE TABLE `avaliacoes` (
@@ -39,18 +39,7 @@ CREATE TABLE `avaliacoes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `categorias`
---
-
-CREATE TABLE `categorias` (
-  `category_id` int NOT NULL,
-  `nome` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `enderecos_de_entrega`
+-- Estrutura para tabela `enderecos_de_entrega`
 --
 
 CREATE TABLE `enderecos_de_entrega` (
@@ -67,7 +56,7 @@ CREATE TABLE `enderecos_de_entrega` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `itens_pedido`
+-- Estrutura para tabela `itens_pedido`
 --
 
 CREATE TABLE `itens_pedido` (
@@ -81,7 +70,7 @@ CREATE TABLE `itens_pedido` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `pedidos`
+-- Estrutura para tabela `pedidos`
 --
 
 CREATE TABLE `pedidos` (
@@ -94,7 +83,7 @@ CREATE TABLE `pedidos` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produtos`
+-- Estrutura para tabela `produtos`
 --
 
 CREATE TABLE `produtos` (
@@ -108,53 +97,30 @@ CREATE TABLE `produtos` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produtos_categorias`
---
-
-CREATE TABLE `produtos_categorias` (
-  `product_id` int NOT NULL,
-  `category_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `usuarios`
+-- Estrutura para tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
   `user_id` int NOT NULL,
-  `nome` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `senha` varchar(255) DEFAULT NULL,
-  `endereco` varchar(255) DEFAULT NULL,
-  `telefone` varchar(20) DEFAULT NULL
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `data_nasc` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Despejando dados para a tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`user_id`, `nome`, `email`, `senha`, `endereco`, `telefone`) VALUES
-(1, 'João Silva', 'joao@example.com', 'senha123', 'Rua A, 123', '999999999'),
-(2, 'Maria Santos', 'maria@example.com', 'senha456', 'Avenida B, 456', '888888888'),
-(3, 'Pedro Souza', 'pedro@example.com', 'senha789', 'Rua C, 789', '777777777'),
-(4, 'Ana Oliveira', 'ana@example.com', 'senhaabc', 'Avenida D, 321', '666666666'),
-(5, 'Lucas Pereira', 'lucas@example.com', 'senhaxyz', 'Rua E, 654', '555555555'),
-(6, 'Mariana Costa', 'mariana@example.com', 'senhajkl', 'Avenida F, 987', '444444444'),
-(7, 'Rafaela Lima', 'rafaela@example.com', 'senhawxy', 'Rua G, 876', '333333333'),
-(8, 'Gustavo Almeida', 'gustavo@example.com', 'senhamno', 'Avenida H, 543', '222222222'),
-(9, 'Sara Ferreira', 'sara@example.com', 'senhadtz', 'Rua I, 210', '111111111'),
-(10, 'Daniel Sousa', 'daniel@example.com', 'senharqs', 'Avenida J, 1234', '000000000'),
-(11, 'cassol', 'vinicius@gmail.com', '123', NULL, '75 999999999'),
-(12, 'cassol', 'vinicius@gmail.com', '', NULL, '75 999999999');
+INSERT INTO `usuarios` (`user_id`, `nome`, `email`, `senha`, `data_nasc`) VALUES
+(11, 'veaga', 'tal@gmail.com', 'tal', '2023-07-02');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `avaliacoes`
+-- Índices de tabela `avaliacoes`
 --
 ALTER TABLE `avaliacoes`
   ADD PRIMARY KEY (`review_id`),
@@ -162,20 +128,14 @@ ALTER TABLE `avaliacoes`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Índices para tabela `categorias`
---
-ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`category_id`);
-
---
--- Índices para tabela `enderecos_de_entrega`
+-- Índices de tabela `enderecos_de_entrega`
 --
 ALTER TABLE `enderecos_de_entrega`
   ADD PRIMARY KEY (`address_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Índices para tabela `itens_pedido`
+-- Índices de tabela `itens_pedido`
 --
 ALTER TABLE `itens_pedido`
   ADD PRIMARY KEY (`item_id`),
@@ -183,40 +143,63 @@ ALTER TABLE `itens_pedido`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Índices para tabela `pedidos`
+-- Índices de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
   ADD PRIMARY KEY (`order_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Índices para tabela `produtos`
+-- Índices de tabela `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`product_id`);
 
 --
--- Índices para tabela `produtos_categorias`
---
-ALTER TABLE `produtos_categorias`
-  ADD PRIMARY KEY (`product_id`,`category_id`),
-  ADD KEY `category_id` (`category_id`);
-
---
--- Índices para tabela `usuarios`
+-- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `avaliacoes`
+--
+ALTER TABLE `avaliacoes`
+  ADD CONSTRAINT `avaliacoes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`user_id`),
+  ADD CONSTRAINT `avaliacoes_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `produtos` (`product_id`);
+
+--
+-- Restrições para tabelas `enderecos_de_entrega`
+--
+ALTER TABLE `enderecos_de_entrega`
+  ADD CONSTRAINT `enderecos_de_entrega_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`user_id`);
+
+--
+-- Restrições para tabelas `itens_pedido`
+--
+ALTER TABLE `itens_pedido`
+  ADD CONSTRAINT `itens_pedido_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `pedidos` (`order_id`),
+  ADD CONSTRAINT `itens_pedido_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `produtos` (`product_id`);
+
+--
+-- Restrições para tabelas `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo de volta</title>
+    <link rel="stylesheet" href="Style/Bem vindo de volta e esqueci minha senha.css">
+</head>
+
+<body>
+    <div class="primeiro">
+        <!--div da esquerda cinza que divide a metade da tela-->
+        <div class="img-content">
+            <IMG SRC="Imagens/logo_site.png" ALIGN="RIGHT" ALT="Logo do site" height="300" width="300">
+                <!--Logo da loja-->
+        </div>
+    </div>
+    <div class="segundo">
+        <!--div da direita branca que divide a metade da tela-->
+        <div class="container">
+            <div class="login-content">
+                <h1>Bem vindo de
+                    <br>
+                    volta!
+                </h1>
+                <p>Não possui cadastro? <a href="Criar_nova_conta.html">faça aqui! <!-- Clicando na texto, o usuário ira ser redirecionado para outra tela, para assim realizar o cadastro -->
+                    </a>
+                </p>
+                <form action="PHP/login.php" method="post"> <!-- conexão com o php -->
+                    <br><br>
+                    <label for="email">Email: 
+                        
+                        <input type="email" class="input_text" placeholder="Digite seu email" name="email" id="email" 
+                            required> <!-- Área onde o usuário irá colocar seu email-->
+                    </label>
+
+                    <br><br>
+                    <label for="senha">Senha:
+                        <input type="password" class="input_text" placeholder="Digite sua senha" name="senha" 
+                            id="senha">
+                            <!--Área -->
+                        <a href="Esqueci_minha_senha.html">esqueci minha senha
+                        </a>
+                        <!--Clicando em "esqueci a senha", o usuário irá para à página onde colocando o seu email ele poderá trocar a senha-->
+                        <br><br>
+                        <input class="btn_logar" type="submit" value="Logar" name="Logar"> 
+                        <!--Após o usuário preencher as informações dele, caso esteja logado ele irá para à página inicial, senão ele irá dar erro-->
+                    </label>
+
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html, body{height: 100%; width: 100%; box-sizing: border-box;}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    height: 8%;
+    background-color: #192438;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+}
+.form-busca-site {
+    width: 400px;
+    height: 100%;
+    margin-top: 20px;
+    grid-column: 2;
+}
+
+.btn-text-top {
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    color: #8795a2;
+    height: 3px;
+    width: 60%;
+    padding: 15px 50px 15px 30px;
+}
+
+.btn-buscar-top {
+    background: url(https://www.devmedia.com.br/imagens/2013/buscar_grey.png) no-repeat;
+    width: 20px;
+    height: 22px;
+    border: none;
+    position: relative;
+
+    top: -17px;
+    left: 280px;
+    transform: translateY(-50%);
+}
+.button {
+    background-color: #303333;
+    color: white;
+    border-radius: 10px;
+    margin: 7px 7px;
+    width: 35%;
+    font-size: 18px;
+    border: 2px solid white;
+    font-size: 0.3cm;
+    text-align: center;
+}
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.icone_login {
+    margin-right: 50px;
+
+}
+
+.icone_coracao{
+    margin-right: 10px;
+}
+
+.icone_carrinho{
+    margin-right: 10px;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+}
+
+.retangulo_grande{
+    border: 0px solid;
+    width: 90%;
+    height: fit-content;
+    position: relative;
+    top: 46px;
+    /* left: 0; */
+    display:flex;
+    align-items: center;
+    justify-content: right; 
+    flex-direction: column;  
+}
+
+.produtos-pequenos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 80px ;
+}
+
+.retangulo{
+    margin: 10px;
+    background-color: rgb(224, 214, 214);
+    border: 1px solid;
+    width: 25%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+} 
+
+.propaganda {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.retangulo_largo{
+    background-color: white;
+    border: 0px solid;
+    width: 100%;
+    height: 100px;
+    display:flex;
+    margin: 0 10px;
+}
+
+.propaganda2 {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    /* top: 60px; */
+    /* right: 35%; */
+    
+}
+.propaganda_alta{
+   width: 131px;
+   margin-left: 55px;
+   margin-top: 80px;
+   position: static;
+}
+
+.retangulo_alto{
+    background-color: rgb(199, 238, 5);
+    border: 1px solid;
+    height: 100%;
+    width: 130px;
+    display:flex;
+    justify-content: right;
+    margin: 0 10px;
+}
+
+.melhores-produtos {
+    width: 35%;
+    height: 100%;
+    /* right: 0; */
+    /* top: 60PX; */
+    /* position: fixed; */
+}
+
+.retangulo_direita{
+    border: 0px solid;
+    width: 100%;
+    height: 100%;
+    margin: 20px 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.retangulo_direita>img{
+    width: 210px;
+    height: 530px;
+}
+.propaganda_melhores_tenis{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    position: static;
+}
+
+.propaganda_selecao_sneakers{
+    width: 100%;
+    height: 100%;
+    margin-left: 40px;
+}
+
+.sub_div_1{
+    width: 100%;
+    height: 50%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+}
+
+.sub_div_1>img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.sub_div_2{
+    width: 100%;
+    height: 20%;
+    background-color:  #262626;
+}
+.sub_div_2 img{
+    width: 100%;
+    height: 100%;
+}
+.sub_div_3{
+    width: 100%;
+    height: 30%;
+    background-color: #262626;
+}
+
+.sub_div_3 img{
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    background-color: #303333;
+    color: white;
+    padding: 2px ;
+    border-radius: 10px;
+    margin: 7px 7px;
+    width: fit-content;
+    font-size: 18px;
+    border: 2px solid white;
+    font-size: 0.3cm;
+    display: flex;
+    text-align: center;
+  }
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    
+}
+
+h1{
+    color: white;
+    font-size: 18px;
+    margin: 0 0 0 5px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+p{
+    color: white;
+    margin: 0;
+    margin: 0 0 0 5px;
+    font-style: arial;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p1{
+    color: greenyellow;
+    margin: 0;
+    margin: 0 0 0 5px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.logo>img{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+

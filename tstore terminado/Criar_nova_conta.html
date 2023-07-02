@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar nova conta</title>
+    <link rel="stylesheet" href="Style/Criar nova conta.css">
+</head>
+
+<body>
+    <div class="primeiro">
+        <!--div da esquerda cinza que divide a metade da tela-->
+        <div class="img-content">
+            <IMG SRC= "Imagens/logo_site.png" ALIGN="RIGHT"ALT="Logo do site" height="300" width="300">
+            </div>
+            <!--logo da loja-->
+    </div>
+    <div class="segundo">
+        <!--div da direta branca que divide a metade da tela-->
+        <div class="container">
+            <div class="login-content">
+                <h1>Criar uma nova 
+                    conta!
+                </h1>
+                <p>Já está cadastrado? <a href="Bem_vindo_de_volta.html">Entre aqui!
+                </a>
+                <!-- Clicando em "Entre aqui!" o usuário irá para a tela para preencher com o cadastro que ele já realizou -->
+                </p>
+                <br><br>
+                <form  action="PHP/cadastro.php" method="post">     
+                    <label for="nome">Nome:
+                        
+                            <input type="text" class="input_text" placeholder="Digite seu nome completo" id="nome" name="nome" size="20" maxlength="50">
+                            <!--Esta área é onde o usuário irá colocar o seu nome-->
+                    </label>
+                    
+                    <br><br>
+                    <label for="email">Email:
+                        <!-- <br><br> -->
+                           <input type="email" class="input_text" placeholder="Digite seu email" name="email" id="email" required>
+                           <!--Esta área é onde o usuário irá colocar o seu email, aqui é necessário usar o @ para que o site aceite-->
+                    </label>
+                    
+                    <br><br>
+                    <label for="senha">Senha:
+                        <!-- <br><br> -->
+                           <input type="password" class="input_text" placeholder="Digite sua senha" name="senha" id="senha">
+                           <!--Esta área é onde o usuário irá colocar à sua senha-->
+                    </label>
+                    
+                    <br><br>
+                    <label for="senha">Confirme Senha:
+                        <!-- <br><br> -->
+                        <input type="password" class="input_text" placeholder="Confirme sua senha" name="senha" id="confirme senha">
+                        <!--Esta área é onde o usuário irá colocar novamente à sua senha-->
+                    </label>
+                    <br><br>
+                    <label for="nome">Número de telefone:
+                        <!-- <br><br> -->
+                        <input type="text" class="input_text" placeholder="(00) 0 0000-0000" id="data" name="telefone" size="20" maxlength="50">
+                        <!--Esta área é onde o usuário irá colocar o seu telefone-->
+                        <br><br>
+                        <input type="submit" class="btn_logar" value="Cadastre-se" name="cadastre-se" >
+                        <!-- Após preencher com as suas informações seguindo as regras, o usuário irá para a tela inicial -->
+                </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
